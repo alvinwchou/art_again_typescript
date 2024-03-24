@@ -3,6 +3,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Gallery from "../gallery/page";
+import LikesCounter from "../likesCounter/page";
 
 interface ArtObject {
     id: string;
@@ -36,6 +37,7 @@ export default function GalleryWall() {
   return (
     <section>
       <h2>Here is your art!</h2>
+      <LikesCounter />
       {artArray.map((individualArt) => {
         return (
           <Gallery
